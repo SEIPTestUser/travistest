@@ -61,7 +61,7 @@ echo "<====================ls-END============================>"
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add --all .
-git commit -m "Deploy to GitHub Pages: ${SHA}"
+git commit -m "Deploy to GitHub Pages:"
 
 # Don't display credentials
 set +x
