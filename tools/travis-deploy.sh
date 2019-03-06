@@ -52,8 +52,9 @@ if git diff --quiet ; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
-ls
-cp module-image-manipulator-example/target/site/apidocs ./
+echo "<====================================================>"
+ll
+cp -r ../module-image-manipulator-example/target/site/apidocs ./
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
