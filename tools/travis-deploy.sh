@@ -53,7 +53,7 @@ if git diff --quiet ; then
     exit 0
 fi
 echo "<====================================================>"
-ll
+ls -la
 cp -r ../module-image-manipulator-example/target/site/apidocs ./
 
 # Commit the "changes", i.e. the new version.
