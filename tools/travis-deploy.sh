@@ -52,10 +52,12 @@ if git diff --quiet ; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
-echo "<====================================================>"
+echo "<==================ls-START============================>"
 ls -la
+echo "<======================================================>"
 cp -r ../module-image-manipulator-example/target/site/apidocs ./
-
+ls -la
+echo "<====================ls-END============================>"
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add --all .
