@@ -55,7 +55,7 @@ fi
 echo "<==================ls-START============================>"
 ls -la
 echo "<======================================================>"
-cp -r ../module-image-manipulator-example/target/site/apidocs ./
+cp -r ../module-image-manipulator-example/target/site/apidocs/* ./
 ls -la
 echo "<====================ls-END============================>"
 # Commit the "changes", i.e. the new version.
