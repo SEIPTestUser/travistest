@@ -1,3 +1,9 @@
-language: java
-script: mvn clean install javadoc:javadoc
+language: 
+  - java
+script: 
+  - mvn clean install 
 
+after_success:
+  - mvn javadoc:javadoc
+  - bash tools/travis-deploy.sh
+  
