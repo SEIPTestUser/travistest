@@ -72,7 +72,8 @@ ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $encrypted_bf13b9e06e68_key -iv $encrypted_bf13b9e06e68_iv -in ../deploykeySEiP.enc -out deploykeySEiP -d
+openssl aes-256-cbc -K $encrypted_7425be490ed8_key -iv $encrypted_7425be490ed8_iv -in ../deploykeySEiP.enc -out deploykeySEiP -d
+
 
 if [ -n "$DEBUG" ] ; then
   set -x
