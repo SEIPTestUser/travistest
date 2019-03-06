@@ -14,7 +14,7 @@
 	<artifactId>module-image-manipulator-example</artifactId>
 	<name>Image manipulator [module example]</name>
 	<description>This is an example of a Maven module</description>
-
+	<dependencies>
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
