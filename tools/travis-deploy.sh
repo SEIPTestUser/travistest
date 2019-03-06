@@ -12,7 +12,9 @@ fi
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
-
+function doCompile {
+	mvn javadoc:javadoc
+}
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
@@ -38,7 +40,7 @@ cd ..
 rm -rf build/* || exit 0
 
 # Run our compile script
-# doCompile
+doCompile
 
 # Now let's go have some fun with the cloned repo
 cd build
@@ -50,6 +52,8 @@ if git diff --quiet ; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
+ls
+cp module-image-manipulator-example/target/site/apidocs ./
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
