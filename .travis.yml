@@ -2,6 +2,11 @@ language:
   - java
 script: 
   - mvn clean install 
+  
+env:
+  global:
+  - ENCRYPTION_LABEL: 7425be490ed8
+  - COMMIT_AUTHOR_EMAIL: antonisgor@gmail.com
 
 after_success:
   - bash tools/travis-deploy.sh
