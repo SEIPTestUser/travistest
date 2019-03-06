@@ -62,6 +62,7 @@ echo "<====================ls-END============================>"
 # The delta will show diffs between new and old versions.
 git add --all .
 git commit -m "Deploy to GitHub Pages:"
+echo "<==================ls-FINAL============================>"
 
 # Don't display credentials
 set +x
